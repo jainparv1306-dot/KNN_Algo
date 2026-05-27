@@ -38,3 +38,7 @@ clf.fit(X_train, y_train)
 prediction = clf.predict(X_test)
 accuracy = np.mean(prediction == y_test)*100
 print(f"Accuracy: {accuracy:.2f}%")
+
+user_input = input("Enter patient details: ")
+details = np.array(user_input.split(), dtype=int)
+print(f"Model prediction: {clf.predict(details)}")
